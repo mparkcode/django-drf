@@ -61,7 +61,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    os.environ['ALLOSED_HOST'],
+    os.environ['ALLOWED_HOST'],
     '127.0.0.1',
     'localhost'
 ]
