@@ -61,7 +61,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    'mpark-moments-drf-api.herokuapp.com',
+    os.environ['ALLOSED_HOST'],
     '127.0.0.1',
     'localhost'
 ]
@@ -71,9 +71,7 @@ if 'CLIENT_ORIGIN' in os.environ:
         os.environ.get('CLIENT_ORIGIN')
     ]
 else:
-    CORS_ALLOWED_ORIGIN = [
-        'http://localhost:8000',
-    ]
+    CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIAlS = True
 
